@@ -1,0 +1,13 @@
+name: k8s runner
+on:
+  workflow_dispatch:
+jobs:
+  check-pods:
+    runs-on: self-hosted
+    steps:
+      - name: Display OS information
+        run: |
+          cat /etc/os-release
+      - name: Display disk's information
+        run: |
+          df -h

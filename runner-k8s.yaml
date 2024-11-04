@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: runner-k8s
+   labels:
+     app: runner
+spec:
+   containers:
+   - name: runner-container
+     image: ghcr.io/pro100chok91/runner:v1.0
+     command: ["/bin/sh", "-c"]
+     args: ["sleep 360d"]
+     imagePullPolicy: Always
+   restartPolicy: Always
